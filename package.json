@@ -1,0 +1,22 @@
+{
+  "name": "taf-from-scratch",
+  "version": "1.0.0",
+  "description": "Test Automation Framework for testing Report Portal application running on Docker",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haykmargar/taf-from-scratch.git"
+  },
+  "keywords": [],
+  "author": "Hayk Margaryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haykmargar/taf-from-scratch/issues"
+  },
+  "homepage": "https://github.com/haykmargar/taf-from-scratch#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.6"
+  }
+}
