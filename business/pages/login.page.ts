@@ -2,9 +2,7 @@ import { Page, Locator } from '@playwright/test';
 import BasePage from '@Pages/base.page';
 import { logger } from '@Utilities/logger';
 
-
 export class LoginPage extends BasePage {
-
     readonly inputUsername: Locator;
     readonly inputPassword: Locator;
     readonly btnSubmit: Locator;
