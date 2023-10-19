@@ -8,6 +8,7 @@ on:
 jobs:
   tests:
     name: check Eslint on push
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
