@@ -1,9 +1,9 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from '@playwright/test';
 import { logger } from '@Utilities/logger';
-import { LoginPage } from "@Pages/login.page";
-import { DashboardsPage } from "@Pages//dashboards.page"
-import { expectedErrorMessage, dashboardsPageTitle } from "@Resources/constants";
-import loginData from "@Resources/loginData.json";
+import { LoginPage } from '@Pages/login.page';
+import { DashboardsPage } from '@Pages//dashboards.page';
+import { expectedErrorMessage, dashboardsPageTitle } from '@Resources/constants';
+import loginData from '@Resources/loginData.json';
 
 test.describe('Login application', () => {
 

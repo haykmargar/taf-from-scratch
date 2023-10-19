@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
-    "test headed": "playwright test --headed"
+    "test headed": "playwright test --headed",
+    "lint": "eslint \"**/*.ts\"",
+    "lint:fix": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",
@@ -20,9 +22,10 @@
   "homepage": "https://github.com/haykmargar/taf-from-scratch#readme",
   "devDependencies": {
     "@playwright/test": "^1.39.0",
-    "@types/node": "^20.8.6"
-  },
-  "dependencies": {
+    "@types/node": "^20.8.6",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "eslint": "^8.51.0",
     "winston": "^3.11.0"
   }
 }
