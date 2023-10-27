@@ -1,33 +1,34 @@
 import { test, expect } from '@playwright/test';
 import { logger } from '@Utilities/logger';
 import { LoginPage } from '@Pages/login.page';
-import { DashboardsPage } from '@Pages//dashboards.page';
-import { expectedErrorMessage, dashboardsPageTitle } from '@Resources/constants';
-import loginData from '@Resources/loginData.json';
+import { DashboardsPage } from '@Pages/dashboards.page';
+import { expectedErrorMessage, expectedDashboardsPageTitle, CREDENTIALS, env } from '@Resources/constants';
 
-test.describe('Login application', () => {
+test.describe(`Login application on ${env} environment`, () => {
 
     let loginPage: LoginPage;
     let dashboardPage: DashboardsPage;
 
-    test.beforeEach( async ({ page, baseURL}) => {
+    test.beforeEach( async ({ page, baseURL }) => {
         loginPage = new LoginPage(page);
         dashboardPage = new DashboardsPage(page);
-        await loginPage.navigate(baseURL!);
+        await loginPage.navigate(baseURL);
     });
 
-    test.afterEach( async ({ page}) => {
+    test.afterEach( async ({ page }) => {
         logger.info('closing Page');
         await page.close();
     });
 
     test('should Login with valid credentials', async () => {
-        await loginPage.login(loginData.valid.username, loginData.valid.password);
-        expect(await dashboardPage.getPageTitle()).toBe(dashboardsPageTitle);
+        await loginPage.login(CREDENTIALS.VALID.USERNAME, CREDENTIALS.VALID.PASSWORD);
+        const actualDashboardsPageTitle = await dashboardPage.getPageTitle();
+        expect(actualDashboardsPageTitle).toBe(expectedDashboardsPageTitle);
     });
 
     test('should not Login with valid credentials', async () => {
-        await loginPage.login(loginData.invalid.username, loginData.invalid.password);
-        expect(await loginPage.getErrorMessage()).toBe(expectedErrorMessage);
+        await loginPage.login(CREDENTIALS.INVALID.USERNAME, CREDENTIALS.INVALID.PASSWORD);
+        const actualErrorMessage = await loginPage.getErrorMessage();
+        expect(actualErrorMessage).toBe(expectedErrorMessage);
     });
 });
