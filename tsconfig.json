@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "commonJs",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "paths": {
+      "@Pages/*": [
+        "business/pages/*"
+      ],
+      "@Resources/*": [
+        "resources/*"
+      ],
+      "@Utilities/*": [
+        "utilities/*"
+      ]
+    },
+    "types": [
+      "node",
+    ]
+  }
+}
