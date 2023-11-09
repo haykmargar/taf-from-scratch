@@ -4,6 +4,7 @@ dotenv.config();
 
 export const env = process.env.ENV;
 export const URL = process.env.URL;
+export const PROJECT_NAME = 'hayk_margaryan1_personal';
 export const CREDENTIALS = {
     VALID: {
         USERNAME: process.env.USERNAME,
