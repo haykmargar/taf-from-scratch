@@ -15,4 +15,10 @@ export default class BasePage {
         logger.info('waiting for page to be loaded');
         await this.page.waitForLoadState();
     }
+
+    async navigateToURL(url: string) {
+        logger.info(`navigating to ${url}`);
+        await this.page.goto(url);
+        await this.page.waitForLoadState();
+    }
 }

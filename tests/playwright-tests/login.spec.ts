@@ -2,9 +2,9 @@ import { test, expect } from '@playwright/test';
 import { logger } from '@Utilities/logger';
 import { LoginPage } from '@Pages/login.page';
 import { DashboardsPage } from '@Pages/dashboards.page';
-import { expectedErrorMessage, expectedDashboardsPageTitle, CREDENTIALS, env } from '@Resources/constants';
+import { expectedErrorMessage, expectedDashboardsPageTitle, CREDENTIALS, ENV } from '@Resources/constants';
 
-test.describe(`Login application on ${env} environment`, () => {
+test.describe(`Login application on ${ENV} environment`, () => {
 
     let loginPage: LoginPage;
     let dashboardPage: DashboardsPage;
