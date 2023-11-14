@@ -1,0 +1,21 @@
+{
+  "default": {
+    "formatOptions": {
+      "snippetInterface": "async-await"
+    },
+    "paths": [
+      "tests/cucumber-tests/features/*.feature"
+    ],
+    "dryRun": false,
+    "require": [
+      "tests/cucumber-tests/step_definitions/*.ts"
+    ],
+    "requireModule": [
+      "ts-node/register",
+      "tsconfig-paths/register"
+    ],
+    "format": [
+      "html:test-results/cucumber-report.html"
+    ]
+  }
+}

@@ -28,6 +28,18 @@ export class LoginPage extends BasePage {
         await this.btnSubmit.click();
     }
 
+    async fillUsername(username: string): Promise <void> {
+        await this.appVersion.waitFor({ state: 'visible' });
+        logger.info(`filling username with: ${username}`);
+        await this.inputUsername.fill(username);
+    }
+
+    async fillPassword(password: string): Promise <void> {
+        await this.appVersion.waitFor({ state: 'visible' });
+        logger.info(`filling password with: ${password}`);
+        await this.inputPassword.fill(password);
+    }
+
     async getErrorMessage() {
         await this.invalidUserNamePasswordError.waitFor({state: 'visible'});
         const message = await this.invalidUserNamePasswordError.textContent();
