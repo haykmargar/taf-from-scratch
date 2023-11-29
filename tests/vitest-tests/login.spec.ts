@@ -3,34 +3,34 @@ import { describe, test, expect, beforeEach, beforeAll, afterEach, afterAll} fro
 import { logger } from '@Utilities/logger';
 import { LoginPage } from '@Pages/login.page';
 import { DashboardsPage } from '@Pages/dashboards.page';
-import { expectedErrorMessage, expectedDashboardsPageTitle, CREDENTIALS, URL, ENV } from '@Resources/constants';
+import { expectedErrorMessage, expectedDashboardsPageTitle } from '@Resources/constants';
+import { CREDENTIALS, URL, ENV } from'@Config/config-data';
 
 describe(`Login application on ${ENV} environment via vitest`, () => {
-
     let browser: Browser;
     let context: BrowserContext;
     let page: Page;
     let loginPage: LoginPage;
     let dashboardPage: DashboardsPage;
 
-    beforeAll( async ()=> {
+    beforeAll(async () => {
         browser = await chromium.launch();
         context = await browser.newContext();
     });
 
-    beforeEach( async () => {
+    beforeEach(async () => {
         page = await context.newPage();
         loginPage = new LoginPage(page);
         dashboardPage = new DashboardsPage(page);
         await loginPage.navigateToURL(URL);
     });
 
-    afterEach( async () => {
+    afterEach(async () => {
         logger.info('closing Page');
         await page.close();
     });
 
-    afterAll( async () => {
+    afterAll(async () => {
         await context.close();
         await browser.close();
     });

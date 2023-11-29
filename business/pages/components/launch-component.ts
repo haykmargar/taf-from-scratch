@@ -6,6 +6,9 @@ export class LaunchComponent extends BaseComponent {
     readonly name: Locator;
     readonly ownerName: Locator;
     readonly totalTests: Locator;
+    readonly passedTests: Locator;
+    readonly failedTests: Locator;
+    readonly skippedTests: Locator;
 
     constructor(page: Page, launch: Locator) {
         super(page);
@@ -13,5 +16,8 @@ export class LaunchComponent extends BaseComponent {
         this.name = this.launch.locator('div[class*="itemInfo__main"]').first();
         this.ownerName = this.launch.locator('span[class*="owner"]').first();
         this.totalTests = this.launch.locator('div[class*="launchSuiteGrid__total"] div a');
+        this.passedTests = this.launch.locator('div[class*="launchSuiteGrid__passed"] a');
+        this.failedTests = this.launch.locator('div[class*="launchSuiteGrid__failed-col"] a');
+        this.skippedTests = this.launch.locator('div[class*="launchSuiteGrid__skipped"] a');
     }
 }

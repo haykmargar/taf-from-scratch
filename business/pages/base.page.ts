@@ -2,7 +2,6 @@ import { Page } from '@playwright/test';
 import { logger } from '@Utilities/logger';
 
 export default class BasePage {
-
     protected page: Page;
 
     constructor(page: Page) {

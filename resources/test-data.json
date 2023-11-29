@@ -15,7 +15,8 @@
         "executions": {
           "total": 10,
           "failed": 9,
-          "passed": 1
+          "passed": 1,
+          "skipped": 0
         },
         "defects": {
           "system_issue": {
@@ -177,7 +178,8 @@
         "executions": {
           "total": 25,
           "failed": 5,
-          "passed": 20
+          "passed": 20,
+          "skipped": 0
         },
         "defects": {
           "product_bug": {
@@ -228,7 +230,9 @@
       "statistics": {
         "executions": {
           "total": 30,
-          "passed": 30
+          "passed": 30,
+          "failed": 0,
+          "skipped": 0
         },
         "defects": {}
       },

@@ -10,8 +10,8 @@ export class DashboardsPage extends BasePage {
     }
 
     async getPageTitle() {
-        await this.titleTextLocator.waitFor({ state: 'visible' });
+        await this.titleTextLocator.waitFor({state: 'visible'});
         const titleText = await this.titleTextLocator.textContent();
-        return  titleText;
+        return titleText;
     }
 }
