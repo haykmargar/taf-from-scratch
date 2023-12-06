@@ -4,8 +4,11 @@
   "description": "Test Automation Framework for testing Report Portal application running on Docker",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test",
-    "test:headed": "playwright test --headed",
+    "playwright": "playwright test --config config/playwright.config.ts",
+    "playwright:headed": "playwright test --headed --config config/playwright.config.ts",
+    "playwright:parallel": "playwright test --config config/playwright.config.ts --workers=4",
+    "vitest": "vitest --config config/vitest.config.ts",
+    "vitest:parallel": "vitest --config config/vitest.config.ts --threads",
     "lint": "eslint \"**/*.ts\"",
     "lint:fix": "npm run lint -- --fix",
     "postinstall": "npx playwright install"
@@ -28,6 +31,8 @@
     "@typescript-eslint/parser": "^6.8.0",
     "dotenv": "^16.3.1",
     "eslint": "^8.51.0",
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "^0.34.6",
     "winston": "^3.11.0"
   }
 }

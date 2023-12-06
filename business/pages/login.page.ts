@@ -18,8 +18,8 @@ export class LoginPage extends BasePage {
         this.appVersion = page.locator('.serviceVersionsBlock__versions-list--YrMaL');
     }
 
-    async login(username: string, password: string): Promise <void> {
-        await this.appVersion.waitFor({ state: 'visible' });
+    async login(username: string, password: string): Promise<void> {
+        await this.appVersion.waitFor({state: 'visible'});
         logger.info(`filling username with: ${username}`);
         await this.inputUsername.fill(username);
         logger.info(`filling password with: ${password}`);
@@ -29,7 +29,7 @@ export class LoginPage extends BasePage {
     }
 
     async getErrorMessage() {
-        await this.invalidUserNamePasswordError.waitFor({ state: 'visible' });
+        await this.invalidUserNamePasswordError.waitFor({state: 'visible'});
         const message = await this.invalidUserNamePasswordError.textContent();
         logger.info(`following error appeared: ${message}`);
         return message;
