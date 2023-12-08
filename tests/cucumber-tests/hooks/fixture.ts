@@ -1,8 +1,6 @@
-import { Page, BrowserContext, Browser } from '@playwright/test';
-import { Logger } from 'winston';
+import { Page, Browser } from '@playwright/test';
+
 export const fixture =  {
     browser: undefined as Browser,
-    context: undefined as BrowserContext,
     page:  undefined as Page,
-    logger: undefined as Logger
 };

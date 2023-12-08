@@ -1,48 +1,40 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
-import { LoginPage } from '@Pages/login.page';
-import { DashboardsPage } from '@Pages/dashboards.page';
 import { expectedErrorMessage, expectedDashboardsPageTitle } from '@Resources/constants';
 import { CREDENTIALS, URL } from '@Config/config-data';
 import { logger } from '@Utilities/logger';
-import { fixture } from '../hooks/fixture';
 
-let loginPage: LoginPage;
-let dashboardPage: DashboardsPage;
-
-Given('I navigate to the login page', async () => {
-    loginPage = new LoginPage(fixture.page);
-    dashboardPage = new DashboardsPage(fixture.page);
-    await loginPage.navigateToURL(URL);
+Given('I navigate to the login page', async function () {
+    await this.loginPage.navigateToURL(URL);
 });
 
-Given('I login to the application', async () => {
-    await loginPage.login(CREDENTIALS.VALID.USERNAME, CREDENTIALS.VALID.PASSWORD);
+Given('I login to the application', async function () {
+    await this.loginPage.login(CREDENTIALS.VALID.USERNAME, CREDENTIALS.VALID.PASSWORD);
 });
 
-When(/^I fill the Username field with (.*) username$/, async (usernameValidnessStatus) => {
+When(/^I fill the Username field with (.*) username$/, async function (usernameValidnessStatus) {
     const username = usernameValidnessStatus === 'valid' ? CREDENTIALS.VALID.USERNAME : CREDENTIALS.INVALID.USERNAME;
-    await loginPage.fillUsername(username);
+    await this.loginPage.fillUsername(username);
 });
 
-When(/^I fill the Password field with (.*) password$/, async (passwordValidnessStatus) => {
+When(/^I fill the Password field with (.*) password$/, async function (passwordValidnessStatus) {
     const password = passwordValidnessStatus === 'valid' ? CREDENTIALS.VALID.PASSWORD : CREDENTIALS.INVALID.PASSWORD;
-    await loginPage.fillPassword(password);
+    await this.loginPage.fillPassword(password);
 });
 
-When(/^I click the Login Button$/, async () => {
+When(/^I click the Login Button$/, async function () {
     logger.info('clicking on login button');
-    await loginPage.btnSubmit.click();
+    await this.loginPage.btnSubmit.click();
 });
 
-Then(/^I should see "ALL DASHBOARDS" page$/, async () => {
+Then(/^I should see "ALL DASHBOARDS" page$/, async function () {
     logger.info('clicking on login button');
-    const actualDashboardsPageTitle = await dashboardPage.getPageTitle();
+    const actualDashboardsPageTitle = await this.dashboardPage.getPageTitle();
     expect(actualDashboardsPageTitle).toBe(expectedDashboardsPageTitle);
 });
 
-Then(/^I should see bad Credentials Error$/, async () => {
+Then(/^I should see bad Credentials Error$/, async function () {
     logger.info('clicking on login button');
-    const actualErrorMessage = await loginPage.getErrorMessage();
+    const actualErrorMessage = await this.loginPage.getErrorMessage();
     expect(actualErrorMessage).toBe(expectedErrorMessage);
 });
