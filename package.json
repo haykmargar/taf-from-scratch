@@ -11,6 +11,8 @@
     "vitest:parallel": "vitest --config config/vitest.config.ts --threads",
     "cucumber": "npx cucumber-js --config config/cucumber.config.json",
     "cucumber:parallel": "npx cucumber-js --config config/cucumber.config.json --parallel=5",
+    "api:playwright": "playwright test tests/api/api-axios.spec.ts",
+
     "lint": "eslint \"**/*.ts\"",
     "lint:fix": "npm run lint -- --fix",
     "postinstall": "npx playwright install"
@@ -38,6 +40,7 @@
     "tsconfig-paths": "^4.2.0",
     "vite-tsconfig-paths": "^4.2.1",
     "vitest": "^0.34.6",
-    "winston": "^3.11.0"
+    "winston": "^3.11.0",
+    "axios": "^1.6.2"
   }
 }

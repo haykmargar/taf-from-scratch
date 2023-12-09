@@ -17,6 +17,12 @@
       ],
       "@Config/*": [
         "config/*"
+      ],
+      "@Services/*": [
+        "business/api/services/*"
+      ],
+      "@Models/*": [
+        "business/api/models/*"
       ]
     },
     "types": [
