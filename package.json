@@ -9,6 +9,8 @@
     "playwright:parallel": "playwright test --config config/playwright.config.ts --workers=4",
     "vitest": "vitest --config config/vitest.config.ts",
     "vitest:parallel": "vitest --config config/vitest.config.ts --threads",
+    "cucumber": "npx cucumber-js --config config/cucumber.config.json",
+    "cucumber:parallel": "npx cucumber-js --config config/cucumber.config.json --parallel=5",
     "lint": "eslint \"**/*.ts\"",
     "lint:fix": "npm run lint -- --fix",
     "postinstall": "npx playwright install"
@@ -25,12 +27,15 @@
   },
   "homepage": "https://github.com/haykmargar/taf-from-scratch#readme",
   "devDependencies": {
+    "@cucumber/cucumber": "^10.0.1",
     "@playwright/test": "^1.39.0",
     "@types/node": "^20.8.6",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
     "@typescript-eslint/parser": "^6.8.0",
     "dotenv": "^16.3.1",
     "eslint": "^8.51.0",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
     "vite-tsconfig-paths": "^4.2.1",
     "vitest": "^0.34.6",
     "winston": "^3.11.0"
