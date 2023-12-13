@@ -3,13 +3,13 @@
     {
       "owner": "hayk.margaryan87gmail.com",
       "description": "### **Demonstration launch.**\nA typical *Launch structure* comprises the following elements: Suite > Test > Step > Log.\nLaunch contains *randomly* generated `suites`, `tests`, `steps` with:\n* random issues and statuses,\n* logs,\n* attachments with different formats.",
-      "id": 6330082,
-      "uuid": "4004db05-dfcc-4793-b7c5-99e4ae7a4e5c",
+      "id": 6500192,
+      "uuid": "fd953eda-48f1-4a99-bf51-338e9db12b69",
       "name": "Demo Api Tests",
-      "number": 1,
-      "startTime": 1699439211795,
-      "endTime": 1699439213606,
-      "lastModified": 1699439213608,
+      "number": 16,
+      "startTime": 1701953179499,
+      "endTime": 1701953181416,
+      "lastModified": 1701953181417,
       "status": "FAILED",
       "statistics": {
         "executions": {
@@ -35,12 +35,12 @@
       },
       "attributes": [
         {
-          "key": "build",
-          "value": "3.8.10.26.51"
+          "key": "platform",
+          "value": "alpine"
         },
         {
-          "key": "platform",
-          "value": "android"
+          "key": "build",
+          "value": "3.7.12.46.19"
         },
         {
           "key": null,
@@ -56,13 +56,13 @@
     {
       "owner": "hayk.margaryan87gmail.com",
       "description": "### **Demonstration launch.**\nA typical *Launch structure* comprises the following elements: Suite > Test > Step > Log.\nLaunch contains *randomly* generated `suites`, `tests`, `steps` with:\n* random issues and statuses,\n* logs,\n* attachments with different formats.",
-      "id": 6330083,
-      "uuid": "930ee964-8ed8-4e5c-8d66-392f4e51698d",
+      "id": 6500193,
+      "uuid": "3073a126-8cac-4865-9468-fde5ef727621",
       "name": "Demo Api Tests",
-      "number": 2,
-      "startTime": 1699439213649,
-      "endTime": 1699439216226,
-      "lastModified": 1699439216228,
+      "number": 17,
+      "startTime": 1701953181470,
+      "endTime": 1701953183871,
+      "lastModified": 1701953183873,
       "status": "FAILED",
       "statistics": {
         "executions": {
@@ -92,34 +92,34 @@
       },
       "attributes": [
         {
+          "key": "build",
+          "value": "3.7.12.46.21"
+        },
+        {
           "key": "platform",
-          "value": "ios"
+          "value": "ubuntu"
         },
         {
           "key": null,
           "value": "demo"
-        },
-        {
-          "key": "build",
-          "value": "3.8.10.26.53"
         }
       ],
       "mode": "DEFAULT",
       "analysing": [],
-      "approximateDuration": 1.811,
+      "approximateDuration": 1.917,
       "hasRetries": true,
       "rerun": false
     },
     {
       "owner": "hayk.margaryan87gmail.com",
       "description": "### **Demonstration launch.**\nA typical *Launch structure* comprises the following elements: Suite > Test > Step > Log.\nLaunch contains *randomly* generated `suites`, `tests`, `steps` with:\n* random issues and statuses,\n* logs,\n* attachments with different formats.",
-      "id": 6330084,
-      "uuid": "d2e668de-0c91-4bcb-aac4-4c80c3495202",
+      "id": 6500196,
+      "uuid": "3a166286-61cf-4463-a5c2-d447fa39d9bc",
       "name": "Demo Api Tests",
-      "number": 3,
-      "startTime": 1699439216272,
-      "endTime": 1699439219579,
-      "lastModified": 1699439219581,
+      "number": 18,
+      "startTime": 1701953184027,
+      "endTime": 1701953187651,
+      "lastModified": 1701953187654,
       "status": "FAILED",
       "statistics": {
         "executions": {
@@ -145,12 +145,12 @@
       },
       "attributes": [
         {
-          "key": "platform",
-          "value": "ubuntu"
+          "key": "build",
+          "value": "3.7.12.46.24"
         },
         {
-          "key": "build",
-          "value": "3.8.10.26.56"
+          "key": "platform",
+          "value": "ios"
         },
         {
           "key": null,
@@ -159,26 +159,26 @@
       ],
       "mode": "DEFAULT",
       "analysing": [],
-      "approximateDuration": 2.194,
+      "approximateDuration": 2.159,
       "hasRetries": true,
       "rerun": false
     },
     {
       "owner": "hayk.margaryan87gmail.com",
       "description": "### **Demonstration launch.**\nA typical *Launch structure* comprises the following elements: Suite > Test > Step > Log.\nLaunch contains *randomly* generated `suites`, `tests`, `steps` with:\n* random issues and statuses,\n* logs,\n* attachments with different formats.",
-      "id": 6330085,
-      "uuid": "5bf15e2a-00bc-4dec-af78-e7d08005e895",
+      "id": 6500197,
+      "uuid": "fa7ecd31-6da5-40a6-ab8b-99ab7e1158ba",
       "name": "Demo Api Tests",
-      "number": 4,
-      "startTime": 1699439219597,
-      "endTime": 1699439223186,
-      "lastModified": 1699439223188,
+      "number": 19,
+      "startTime": 1701953187696,
+      "endTime": 1701953190937,
+      "lastModified": 1701953190939,
       "status": "FAILED",
       "statistics": {
         "executions": {
           "total": 25,
-          "failed": 5,
           "passed": 20,
+          "failed": 5,
           "skipped": 0
         },
         "defects": {
@@ -199,11 +199,11 @@
       "attributes": [
         {
           "key": "build",
-          "value": "3.8.10.26.59"
+          "value": "3.7.12.46.27"
         },
         {
           "key": "platform",
-          "value": "alpine"
+          "value": "android"
         },
         {
           "key": null,
@@ -212,47 +212,47 @@
       ],
       "mode": "DEFAULT",
       "analysing": [],
-      "approximateDuration": 2.565,
+      "approximateDuration": 2.647333,
       "hasRetries": true,
       "rerun": false
     },
     {
       "owner": "hayk.margaryan87gmail.com",
       "description": "### **Demonstration launch.**\nA typical *Launch structure* comprises the following elements: Suite > Test > Step > Log.\nLaunch contains *randomly* generated `suites`, `tests`, `steps` with:\n* random issues and statuses,\n* logs,\n* attachments with different formats.",
-      "id": 6330087,
-      "uuid": "06401aec-4ea1-45a1-80c8-c3eaea6edb6b",
+      "id": 6500198,
+      "uuid": "fea4ad1c-716a-486e-a109-b00a9a3cb198",
       "name": "Demo Api Tests",
-      "number": 5,
-      "startTime": 1699439223205,
-      "endTime": 1699439227917,
-      "lastModified": 1699439227919,
+      "number": 20,
+      "startTime": 1701953190970,
+      "endTime": 1701953194622,
+      "lastModified": 1701953194624,
       "status": "PASSED",
       "statistics": {
         "executions": {
           "total": 30,
           "passed": 30,
-          "failed": 0,
-          "skipped": 0
+          "skipped": 0,
+          "failed": 0
         },
         "defects": {}
       },
       "attributes": [
         {
-          "key": null,
-          "value": "demo"
-        },
-        {
           "key": "build",
-          "value": "3.8.10.27.3"
+          "value": "3.7.12.46.30"
         },
         {
           "key": "platform",
-          "value": "windows"
+          "value": "ubuntu"
+        },
+        {
+          "key": null,
+          "value": "demo"
         }
       ],
       "mode": "DEFAULT",
       "analysing": [],
-      "approximateDuration": 2.821,
+      "approximateDuration": 2.79575,
       "hasRetries": false,
       "rerun": false
     }
