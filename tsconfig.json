@@ -23,10 +23,13 @@
       ],
       "@Models/*": [
         "business/api/models/*"
+      ],
+      "@Cypress/*": [
+        "cypress/*"
       ]
     },
     "types": [
-      "node",
+      "node", "cypress", "cypress/support"
     ]
   }
 }
