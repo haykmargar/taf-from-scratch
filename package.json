@@ -1,7 +1,7 @@
 {
   "name": "taf-from-scratch",
   "version": "1.0.0",
-  "description": "Test Automation Framework for testing Report Portal application running on Docker",
+  "description": "Test Automation Framework for testing Report Portal application",
   "main": "index.js",
   "scripts": {
     "playwright": "playwright test --config config/playwright.config.ts",
