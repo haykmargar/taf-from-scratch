@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+    stages {
+        stage('Scan') {
+            steps {
+                withSonarQubeEnv(installationName: 'taf-from-scratch') {
+                        sh 'sonar-scanner'
+                }
+            }
+        }
+    }
