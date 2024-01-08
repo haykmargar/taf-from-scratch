@@ -1,7 +1,7 @@
 {
   "name": "taf-from-scratch",
   "version": "1.0.0",
-  "description": "Test Automation Framework for testing Report Portal application running on Docker",
+  "description": "Test Automation Framework for testing Report Portal application",
   "main": "index.js",
   "scripts": {
     "playwright": "playwright test --config config/playwright.config.ts",
@@ -12,7 +12,8 @@
     "cucumber": "npx cucumber-js --config config/cucumber.config.json",
     "cucumber:parallel": "npx cucumber-js --config config/cucumber.config.json --parallel=5",
     "api:playwright": "playwright test tests/api/api-axios.spec.ts",
-
+    "cypress:open": "cypress open --config-file config/cypress.config.ts",
+    "cypress:test": "cypress run --config-file config/cypress.config.ts",
     "lint": "eslint \"**/*.ts\"",
     "lint:fix": "npm run lint -- --fix",
     "postinstall": "npx playwright install"
@@ -34,13 +35,15 @@
     "@types/node": "^20.8.6",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
     "@typescript-eslint/parser": "^6.8.0",
+    "axios": "^1.6.2",
+    "cypress": "^13.6.1",
+    "cypress-mochawesome-reporter": "^3.7.0",
     "dotenv": "^16.3.1",
     "eslint": "^8.51.0",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "vite-tsconfig-paths": "^4.2.1",
     "vitest": "^0.34.6",
-    "winston": "^3.11.0",
-    "axios": "^1.6.2"
+    "winston": "^3.11.0"
   }
 }

@@ -11,6 +11,7 @@ module.exports = {
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "@typescript-eslint/no-namespace": "off"
     }
 };
