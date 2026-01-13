@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "commonJs",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "paths": {
+      "@Pages/*": [
+        "business/pages/*"
+      ],
+      "@Resources/*": [
+        "resources/*"
+      ],
+      "@Utilities/*": [
+        "utilities/*"
+      ],
+      "@Config/*": [
+        "config/*"
+      ],
+      "@Services/*": [
+        "business/api/services/*"
+      ],
+      "@Models/*": [
+        "business/api/models/*"
+      ],
+      "@Cypress/*": [
+        "cypress/*"
+      ]
+    },
+    "types": [
+      "node", "cypress", "cypress/support"
+    ]
+  }
+}
